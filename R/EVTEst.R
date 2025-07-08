@@ -4,7 +4,7 @@ library(tidyverse)
 library(evir)
 data(danish)
 Y = danish
-# Y = c(rnorm(1000),rnorm(1000,0,2))
+#Y = c(rnorm(1000),rnorm(1000,0,2))
 th = quantile(Y,.95)
 res_eva <- eva::gpdFit(Y, threshold = th)
 res_evir <- evir::gpd(Y, threshold = th)
